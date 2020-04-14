@@ -12,7 +12,15 @@ def max_pairwise_product(numbers):
     return max_product
 
 
+# My solution
+def max_pairwise_product_fast(numbers):
+    first_max_number = numbers.pop(numbers.index(max(numbers)))
+    second_max_number = numbers.pop(numbers.index(max(numbers)))
+
+    return first_max_number*second_max_number
+
+
 if __name__ == '__main__':
     input_n = int(input())
     input_numbers = [int(x) for x in input().split()]
-    print(max_pairwise_product(input_numbers))
+    print(max_pairwise_product_fast(input_numbers))
